@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="page">
+    <link rel="stylesheet" type="text/css" href="{% static 'budzetapp/style.css' %}">
+    <title>{% block title %}BudzetApp Baza Buki{% endblock %}</title>
+
+</head>
+<style>
+    button.blocktext {
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+    display:block;
+    border-radius:15px;
+}
+</style>
+<div class="body">
+    <h1>Budżet domowy <div class="podtytulstrony">{% block podtytulstrony %}{% endblock %}</div></h1>
+
+{% block content %}{% endblock %}
+</div>
+</html>

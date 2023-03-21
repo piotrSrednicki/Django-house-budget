@@ -1,0 +1,84 @@
+{% extends "budzetapp/base.html" %}
+
+{% block title %}bukawykresyfiltrowanie{% endblock %}
+{% block podtytulstrony %}Filtrowanie transakcji według daty{% endblock %}
+{% block content %}
+<style>
+    .kategoria{
+        border-width: 15px;
+    background-color: #FDF5E6;
+    border-style:double;
+    border-color: #F08080;
+    text-align:center;
+    margin-top: 5px;
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .obiekttransakcji{
+        border-width: 15px;
+    background-color: #FDF5E6;
+    border-style:double;
+    border-color: #F08080;
+    margin-top: 5px;
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .elementobiektu{
+        display:inline-block;
+        width:200px;
+        border-style: none ridge none none;
+        border-width: 15px;
+        border-color: #F08080;
+        padding:5px;
+        text-align:center;
+        height:100%;
+    }
+    .elementobiektuostatni{
+        display:inline-block;
+        width: max-content;
+        height:100%;
+        margin-top:auto;
+        margin-bottom:auto;
+        padding:5px;
+    }
+</style>
+{% if user.is_authenticated %}
+<a id="prostokat3" href="{% url 'wykresy_filtrowanie' %}">Cofnij</a>
+
+<div class="kategoria">
+<form action="" method="post" novalidate>
+{% csrf_token %}
+{{ form.as_p }}
+
+<input type="submit" value="Submit">
+</form>
+</div>
+<p class="kategoria">Data od: {{data1}} do: {{data2}}</p>
+{% for transaction in listaTransakcji %}
+
+{% endfor %}
+{% if listaTransakcji %}
+<div class="obiekttransakcji">
+        <div class="elementobiektu">Typ:</div>
+        <div class="elementobiektu">Kategoria:</div>
+        <div class="elementobiektu">Suma:</div>
+        <div class="elementobiektuostatni">Data:</div>
+    </div>
+{% else %}
+    <p class="formularz">Użytkownik nie posiada żadnych transakcji w takim przedziale dat</p>
+{% endif %}
+{% for transaction in listaTransakcji %}
+    <div class="obiekttransakcji">
+        <div class="elementobiektu">{{transaction.type}}</div>
+        <div class="elementobiektu">{{ transaction.category.name }}</div>
+        <div class="elementobiektu">{{ transaction.sum }}</div>
+        <div class="elementobiektuostatni">{{transaction.trans_date}}</div>
+    </div>
+{% endfor %}
+{% else %}
+    <p id="prostokat1">You are not logged in</p>
+    <a id="prostokat2" href="{% url 'login' %}">Zaloguj</a>
+{% endif %}
+{% endblock %}

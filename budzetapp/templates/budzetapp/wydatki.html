@@ -1,0 +1,34 @@
+{% extends "budzetapp/base.html" %}
+
+{% block title %}bukawydatki{% endblock %}
+{% block podtytulstrony %}Wydatki{% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+<style>
+    .kategoria{
+        border-width: 15px;
+    background-color: #FDF5E6;
+    border-style:double;
+    border-color: #F08080;
+    margin-top: 5px;
+    width:25%;
+    margin-left: auto;
+    padding-left: 20px;
+    margin-right: auto;
+
+    }
+    </style>
+<div class="kategoria">
+<form action="" method="POST">
+{% csrf_token %}
+{{form.as_p}}
+<input type="submit" value="Potwierdź">
+</form>
+</div>
+<a id="prostokat3" href="{% url 'userInterface' %}">Cofnij</a>
+
+{% else %}
+    <p id="prostokat1">You are not logged in</p>
+    <a id="prostokat2" href="{% url 'login' %}">Zaloguj</a>
+{% endif %}
+{% endblock %}

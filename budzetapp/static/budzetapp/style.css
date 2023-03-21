@@ -1,0 +1,194 @@
+.poledowpisywania{
+    border-style: none;
+    margin-top:auto;
+    margin-bottom:auto;
+    padding-top:5px;
+    padding-bottom:auto;
+    font-size:20px;
+    width:50%;
+
+}
+
+.formularz{
+
+    margin-top: 10px;
+    border-width: 15px;
+    background-color: #FDF5E6;
+    border-style:double;
+    border-color: #F08080;
+    padding: 5px;
+    text-align: left;
+    width:25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.potwierdzeniewydatkiprzychody{
+    margin-top: 10px;
+    border-width: 15px;
+    font-size:30px;
+    background-color: #FDF5E6;
+    border-style:double;
+    border-color: #F08080;
+    padding: 5px;
+    text-align: center;
+    width:20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.podtytulstrony{
+    font-size:25px;
+
+}
+body {
+    width:auto;
+    height:100%;
+  background: url("https://assets.archon.pl/images/products/m9831f6ed9caf9/widok-1-projekt-dom-w-awokado-ver-2-acd9d5bb0545108290b8dd10ad7aadbb__289.jpg");
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div {
+    font-size: 32px;
+    width:100%;
+    height:100%;
+}
+
+#prostokat1, #prostokat2,#prostokatlogin{
+    margin-top: 5px;
+    border-width: 15px;
+    background-color: #FDF5E6;
+    border-style:double;
+    border-color: #F08080;
+    padding: 5px;
+    text-align: left;
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:5px;
+}
+#loginbutton{
+    margin-top: 5px;
+    border-width: 15px;
+    background-color: #FDF5E6;
+    border-style:double;
+    border-color: #F08080;
+    padding: 5px;
+    text-align: left;
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:5px;
+}
+a#prostokat3{
+    margin-bottom:30 px;
+    border-width: 15px;
+    background-color: #FDF5E6;
+    border-style: ridge;
+    border-color: #F08080;
+    padding: 5px;
+    width:6%;
+    margin-left: 30px;
+    margin-right: auto;
+    font-size: 20px;
+    color:red;
+    display: block;
+    transition: color 0.5s ease-out;
+
+}
+
+h1{
+font-size:45px;
+    margin-top: 25px;
+    border-width: 15px;
+    background-color: #FDF5E6;
+    border-style:double;
+    border-color: #F08080;
+    padding: 25px;
+    text-align: center;
+    width:80%;
+    margin-left: auto;
+  margin-right: auto;
+  display:block;
+}
+a{
+    margin-top: auto;
+    border-width: 15px;
+    background-color: #FDF5E6;
+    border-color: #F08080;
+    padding: 5px;
+    text-align: center;
+    width:6%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color:red;
+    display:block;
+    transition: color 0.5s ease-out;
+    text-decoration:none;
+}
+
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+#prostokat3:link {
+  color: red;
+}
+
+/* visited link */
+#prostokat3:visited {
+  color: green;
+}
+
+/* mouse over link */
+#prostokat3:hover {
+  color: hotpink;
+
+}
+
+/* selected link */
+#prostokat3:active {
+  color: blue;
+}
+
+a.blok{
+    margin-top: 10px;
+    border-width: 15px;
+    background-color: #FDF5E6;
+    border-style:double;
+    border-color: #F08080;
+    padding: 5px;
+    text-align: center;
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buka{
+
+margin-top:30px;
+}
+
+.buka1{
+
+margin-left:auto;
+margin-right:auto;
+width:30%;
+}
+

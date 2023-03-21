@@ -1,0 +1,50 @@
+{% extends "budzetapp/base.html" %}
+
+{% block title %}bukaInterface{% endblock %}
+{% block href%}{% url 'logout' %}{%endblock%}
+{% block cofnij%}Wyloguj{%endblock%}
+{% block podtytulstrony %}Interfejs użytkownika{% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+<style>
+    .czesc{
+    margin-left:20px;
+    margin-right:auto;
+    padding:5px;
+    background-color:#FDF5E6;
+    border-style: solid;
+    width:15%;
+    border-radius:15px;
+    border-width: 5px;
+    border-color: #F08080;
+    opacity:0.8;
+    text-align:center;
+    a#prostokat2{
+    text-align:center;
+    }
+    .wyloguj{
+    margin-top: 10px;
+    border-width: 15px;
+    background-color: #FDF5E6;
+    border-style:ridge;
+    border-color: #F08080;
+    padding: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-style:double;
+    margin-top:5px;
+    }
+}
+</style>
+<div class="czesc">Witaj {{ user.username }}!</div>
+    <a class="blok" href="{% url 'przychody' %}">Wprowadź przychody</a>
+    <a class="blok" href="{% url 'wydatki' %}">Wprowadź wydatki</a>
+    <a class="blok" href="{% url 'wykresy_filtrowanie' %}">Filtrowanie i wykresy</a>
+    <a class="blok" href="{% url 'logout' %}">Wyloguj</a>
+{% else %}
+    <p id="prostokat1">You are not logged in</p>
+    <a id="prostokat3" href="{% url 'login' %}">Zaloguj</a>
+{% endif %}
+
+{% endblock %}

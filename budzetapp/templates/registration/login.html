@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Home page">
+    <link rel="stylesheet" type="text/css" href="{% static 'budzetapp/style.css' %}">
+    <title>BudzetApp Zaloguj Buki</title>
+</head>
+<style>
+    button.blocktext {
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+    display:block;
+    border-radius:15px;
+}
+
+
+
+</style>
+<div class="body">
+    <h1>Budżet domowy <div class="podtytulstrony">{% block podtytulstrony %}ekran logowania{% endblock %}</div></h1>
+    <div>
+        <form id="prostokat1" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button id="blocktext" type="submit">Log In</button>
+        </form>
+
+    </div>
+    <a id="prostokat2" href="{% url 'rejestracja' %}">Zarejestruj się</a>
+    <!--<a class="buka" href="{% url 'userInterface' %}" >Zaloguj</a>-->
+
+</div>
+</html>

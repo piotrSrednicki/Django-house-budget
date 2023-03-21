@@ -1,0 +1,12 @@
+{% extends "budzetapp/base.html" %}
+
+{% block title %}bukawykresyfiltrowanie{% endblock %}
+{% block podtytulstrony %}Wykresy i filtrowanie{% endblock %}
+{% block content %}
+<a href="{% url 'transakcje' %}" class="formularz">Pokaż wszystkie transakcje</a>
+<a href="{% url 'wykresslupkowy' %}" class="formularz">Utwórz wykres słupkowy</a>
+<a href="{% url 'wykreskolowy' %}" class="formularz">Utwórz wykres kołowy</a>
+<a href="{% url 'transakcjefiltrowanie' %}" class="formularz">Filtrowanie kategorią</a>
+<a href="{% url 'transakcjefiltrowaniedatapomiedzy' %}" class="formularz">Filtrowanie datą</a>
+<a id="prostokat3" href="{% url 'userInterface' %}">Cofnij</a>
+{% endblock %}

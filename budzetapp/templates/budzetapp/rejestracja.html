@@ -1,0 +1,28 @@
+{% extends "budzetapp/base.html" %}
+
+{% block title %}rejestracja{% endblock %}
+{% block podtytulstrony %}Wydatki{% endblock %}
+{% block content %}
+<style>
+    .rejestracja{
+        border-width: 15px;
+    background-color: #FDF5E6;
+    border-style:double;
+    border-color: #F08080;
+    text-align:center;
+    margin-top: 5px;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+</style>
+    <div class="rejestracja">
+    <form action="" method="post">
+    {% csrf_token %}
+        {{form.as_p}}
+        <br/>
+        <input type="submit" value="submit"/>
+    </form>
+        </div>
+<a class="buka" href="{% url 'login' %}" >Zaloguj</a>
+{% endblock %}
